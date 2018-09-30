@@ -29,8 +29,12 @@ metadata, df = tmx2dataframe.read("/path/to/tmxfile.tmx")
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
-
+We use pytest for our tests.
+```
+pip install pytest
+cd navigate/to/project/folder
+pytest
+```
 
 ## Contributing
 
