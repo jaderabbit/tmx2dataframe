@@ -15,3 +15,15 @@ def test_tmx2dataframe_dataframe():
     assert len(df) == 2
     assert df.iloc[0]['target_language'] == "eng-GB"
     assert df.iloc[0]['target_sentence'] == "freedom of artistic creativity;"
+
+def test_tmx2dataframe_differentattributename(): 
+    metadata, df = tmx2dataframe.read('tests/example.1.tmx')
+
+    assert 'source_language' in df.columns
+    assert 'source_sentence' in df.columns
+    assert 'target_language' in df.columns
+    assert 'target_sentence' in df.columns
+
+    assert len(df) == 2
+    assert df.iloc[0]['target_language'] == "eng-GB"
+    assert df.iloc[0]['target_sentence'] == "freedom of artistic creativity;"

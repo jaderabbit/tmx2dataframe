@@ -3,7 +3,10 @@ from xml.dom import minidom
 
 
 def process_tuv(tuv):
-    lang = tuv.attributes['lang'].value
+    if 'lang' in tuv.attributes:
+        lang = tuv.attributes['lang'].value
+    else: 
+        lang = tuv.attributes['xml:lang'].value
     seg = tuv.getElementsByTagName('seg')[0]
     txt = seg.childNodes[0].data
     return lang, txt
