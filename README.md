@@ -1,11 +1,9 @@
 # tmx2dataframe
 
-A python package to convert a tmx translation file into a pandas dataframe.
+A python package to convert a tmx translation file into a pandas dataframe. Please note that this is very early stages and is certainly not ready for production use.
 
 
 ## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 

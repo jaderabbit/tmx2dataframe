@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx11.dtd">
+<tmx version="1.1">
+	<header
+		creationtool = "CTexT Alignment Interface Pro 1.0"
+		segtype = "sentence"
+		o-tmf = "CTexT Alignment Interface Pro 1.0 Output"
+		adminlang="EN-US"
+		srclang="zul-ZA"
+		datatype="plaintext"
+	>
+	</header>
+    <body>
+		<tu>
+			<tuv lang="zul-ZA">
+				<seg>inkululeko yokwakha izinto ngokusebenzisa ubuciko;</seg>
+			</tuv>
+			<tuv lang="eng-GB">
+				<seg>freedom of artistic creativity;</seg>
+			</tuv>
+		</tu>
+        <tu>
+			<tuv lang="zul-ZA">
+				<seg>Samukela uDkt. Imtiaz Sooliman kulendlu namuhla, wenhlangano i-Gift of the Givers. </seg>
+			</tuv>
+			<tuv lang="eng-GB">
+				<seg>We welcome Dr Imtiaz Sooliman of the Gift of the Givers in this house today. </seg>
+			</tuv>
+		</tu>
+    </body>
+</tmx>
