@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx11.dtd">
+<tmx version="1.1">
+	<header
+		creationtool = "CTexT Alignment Interface Pro 1.0"
+		segtype = "sentence"
+		o-tmf = "CTexT Alignment Interface Pro 1.0 Output"
+		adminlang="EN-US"
+		srclang="zul-ZA"
+		datatype="plaintext"
+	>
+	</header>
+    <body>
+		<tu>
+			<tuv xml:lang="zul-ZA">
+				<seg>inkululeko yokwakha izinto ngokusebenzisa ubuciko;</seg>
+			</tuv>
+			<tuv xml:lang="eng-GB">
+				<seg>freedom of artistic creativity;</seg>
+			</tuv>
+			<tuv xml:lang="tel-IN">
+				<seg>కళాత్మక సృజనాత్మకత స్వేచ్ఛ;</seg>
+			</tuv>
+		</tu>
+        <tu>
+			<tuv xml:lang="zul-ZA">
+				<seg>Samukela uDkt. Imtiaz Sooliman kulendlu namuhla, wenhlangano i-Gift of the Givers. </seg>
+			</tuv>
+			<tuv xml:lang="eng-GB">
+				<seg>We welcome Dr Imtiaz Sooliman of the Gift of the Givers in this house today. </seg>
+			</tuv>
+			<tuv xml:lang="tel-IN">
+				<seg>ఈ రోజు ఈ బహుమతుల బహుమతి యొక్క డాక్టర్ ఇంతియాజ్ సూలిమాన్‌ను మేము స్వాగతిస్తున్నాము.</seg>
+			</tuv>
+		</tu>
+    </body>
+</tmx>

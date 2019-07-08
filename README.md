@@ -20,7 +20,7 @@ pip install tmx2dataframe
 ## Usage
 
 ```
-import tmx2dataframe
+from tmx2dataframe import tmx2dataframe
 
 metadata, df = tmx2dataframe.read("/path/to/tmxfile.tmx")
 ```
