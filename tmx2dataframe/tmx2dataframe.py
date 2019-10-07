@@ -39,15 +39,18 @@ def read(path):
     translation_units = body.getElementsByTagName('tu')
     items = []
     for tu in translation_units:
-        srclang, srcsentence = process_tuv(tu.getElementsByTagName('tuv')[0])
-        targetlang, targetsentence = process_tuv(tu.getElementsByTagName('tuv')[1])
-        item = {
-            'source_language': srclang,
-            'source_sentence': srcsentence,
-            'target_language': targetlang,
-            'target_sentence': targetsentence
-        }
-        items.append(item)
+        if len(tu.getElementsByTagName('tuv')) < 2:
+            print("Unpaired translation. Ignoring...")
+        else:
+            srclang, srcsentence = process_tuv(tu.getElementsByTagName('tuv')[0])
+            targetlang, targetsentence = process_tuv(tu.getElementsByTagName('tuv')[1])
+            item = {
+                'source_language': srclang,
+                'source_sentence': srcsentence,
+                'target_language': targetlang,
+                'target_sentence': targetsentence
+            }
+            items.append(item)
 
     df = pd.DataFrame(items)
     return metadata, df
