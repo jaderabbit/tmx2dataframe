@@ -3,10 +3,9 @@ from xml.dom import minidom
 
 
 def process_tuv(tuv):
-    if 'lang' in tuv.attributes:
-        lang = tuv.attributes['lang'].value
-    else: 
-        lang = tuv.attributes['xml:lang'].value
+    lang = tuv.getAttribute("lang")
+    if lang == '':
+        lang = tuv.getAttribute("xml:lang")
     seg = tuv.getElementsByTagName('seg')[0]
     txt = seg.childNodes[0].data
     return lang, txt
@@ -38,9 +37,11 @@ def read(path):
     body = tmx.getElementsByTagName('body')[0]
     translation_units = body.getElementsByTagName('tu')
     items = []
+    count_unpaired = 0
     for tu in translation_units:
         if len(tu.getElementsByTagName('tuv')) < 2:
             print("Unpaired translation. Ignoring...")
+            count_unpaired = count_unpaired + 1
         else:
             srclang, srcsentence = process_tuv(tu.getElementsByTagName('tuv')[0])
             targetlang, targetsentence = process_tuv(tu.getElementsByTagName('tuv')[1])
@@ -53,6 +54,8 @@ def read(path):
             items.append(item)
 
     df = pd.DataFrame(items)
+    if count_unpaired > 0:
+       print("The data contained %d unpaired translations which were ignored" % (count_unpaired))
     return metadata, df
 
     
